@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Image Studio - Multi-Model</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #0f0f0f; color: white; text-align: center; padding: 20px; }
+        .box { background: #1a1a1a; padding: 25px; border-radius: 15px; display: inline-block; border: 1px solid #333; }
+        input, select, button { padding: 12px; margin: 10px; border-radius: 8px; border: none; font-size: 14px; }
+        input[type="text"] { width: 300px; background: #2a2a2a; color: white; }
+        button { background: #007bff; color: white; cursor: pointer; font-weight: bold; width: 150px; }
+        button:hover { background: #0056b3; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+        .img-card { background: #1a1a1a; padding: 10px; border-radius: 12px; border: 1px solid #333; position: relative; }
+        img { width: 100%; border-radius: 8px; display: block; }
+        .status { font-size: 12px; color: #888; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Z Image Studio</h1>
+    
+    <div class="box">
+        <input type="text" id="prompt" placeholder="A magical forest, 8k..." value="A futuristic city neon rain">
+        <br>
+        <select id="model">
+            <option value="flux">FLUX.1 Schnell</option>
+            <option value="phoenix">Leonardo Phoenix</option>
+            <option value="lucid">Lucid Origin</option>
+            <option value="dreamshaper">Dreamshaper 8</option>
+            <option value="lightning">SDXL Lightning</option>
+        </select>
+        <input type="number" id="zCount" value="1" min="1" max="10" title="Number of images (Z)">
+        <button id="genBtn" onclick="runZWorkflow()">Generate</button>
+    </div>
+
+    <div id="imageGrid" class="grid"></div>
+
+    <script>
+        async function runZWorkflow() {
+            const prompt = document.getElementById('prompt').value;
+            const model = document.getElementById('model').value;
+            const z = parseInt(document.getElementById('zCount').value);
+            const grid = document.getElementById('imageGrid');
+            const btn = document.getElementById('genBtn');
+
+            if(!prompt) return alert("Enter a prompt!");
+            
+            grid.innerHTML = ""; 
+            btn.disabled = true;
+
+            for (let i = 0; i < z; i++) {
+                // Create a placeholder card
+                const card = document.createElement('div');
+                card.className = "img-card";
+                card.innerHTML = `<div class="status" id="status-${i}">Creating image ${i+1}...</div>`;
+                grid.appendChild(card);
+
+                try {
+                    const response = await fetch("YOUR_WORKER_URL_HERE", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": "Bearer 1234567890" // MUST match env.AIKEY
+                        },
+                        body: JSON.stringify({ prompt, model })
+                    });
+
+                    if (!response.ok) throw new Error("Unauthorized or AI Error");
+
+                    const blob = await response.blob();
+                    const url = URL.createObjectURL(blob);
+                    
+                    card.innerHTML = `<img src="${url}"><div class="status">Image ${i+1} (${model})</div>`;
+                } catch (err) {
+                    card.innerHTML = `<div style="color:red">Failed: ${err.message}</div>`;
+                }
+            }
+            btn.disabled = false;
+        }
+    </script>
+</body>
+</html>
