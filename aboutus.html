@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Futuronix - Software Development Company</title>
+    <meta name="description" content="Learn about Futuronix - a leading software development company with 10+ years of experience delivering innovative solutions.">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        .btn-primary { background: linear-gradient(135deg, #f97316, #ea580c); }
+                        .dropdown { position: relative; }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.2s ease, visibility 0.2s ease; }
+        .dropdown:hover > .dropdown-menu { display: block; opacity: 1; visibility: visible; }
+        .mobile-section { border-bottom: 1px solid #333; padding-bottom: 12px; margin-bottom: 12px; }
+        .mobile-section-title { color: #f97316; font-weight: 600; font-size: 12px; margin-bottom: 8px; text-transform: uppercase; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Top Bar -->
+    <div class="bg-black text-white text-xs py-2 px-4 hidden md:flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <a href="https://wa.me/15597178583" class="flex items-center gap-1 hover:text-orange-500"><i class="fab fa-whatsapp text-green-500"></i> (USA) +1 (559) 717-8583</a>
+            <a href="https://wa.me/918010587233" class="flex items-center gap-1 hover:text-orange-500"><i class="fas fa-phone text-xs"></i> (IND) +91 80105 87233</a>
+            <a href="mailto:info@futuronix.uk" class="flex items-center gap-1 hover:text-orange-500"><i class="fas fa-envelope text-orange-500"></i> info@futuronix.uk</a>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="#" class="hover:text-orange-500"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-orange-500"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-orange-500"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="hover:text-orange-500"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold"><span class="text-orange-500">Futur</span>onix</a>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <div class="dropdown relative">
+                        <button class="flex items-center gap-1 hover:text-orange-500 py-4">Services <i class="fas fa-chevron-down text-xs"></i></button>
+                        <div class="dropdown-menu absolute top-full left-0 bg-white text-gray-800 rounded-lg shadow-xl w-[600px] p-4 grid grid-cols-2 gap-2 z-50">
+                            <div>
+                                <h4 class="font-bold text-orange-500 mb-2 px-3">Mobile Development</h4>
+                                <a href="mobile-app-development.html" class="block px-3 py-2 rounded text-sm">Mobile App Development</a>
+                                <a href="android-app-development.html" class="block px-3 py-2 rounded text-sm">Android App Development</a>
+                                <a href="ios-app-development.html" class="block px-3 py-2 rounded text-sm">iOS App Development</a>
+                                <a href="flutter-app-development.html" class="block px-3 py-2 rounded text-sm">Flutter App Development</a>
+                                <a href="react-native-app-development.html" class="block px-3 py-2 rounded text-sm">React Native Development</a>
+                                <h4 class="font-bold text-orange-500 mb-2 mt-4 px-3">Web Development</h4>
+                                <a href="website-development-services.html" class="block px-3 py-2 rounded text-sm">Website Development</a>
+                                <a href="react-js-development-services.html" class="block px-3 py-2 rounded text-sm">React.js Development</a>
+                                <a href="node-js-development-services.html" class="block px-3 py-2 rounded text-sm">Node.js Development</a>
+                                <a href="laravel-development-services.html" class="block px-3 py-2 rounded text-sm">Laravel Development</a>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-orange-500 mb-2 px-3">AI & Emerging Tech</h4>
+                                <a href="ai-development-services.html" class="block px-3 py-2 rounded text-sm">AI Development</a>
+                                <a href="ai-chatbot-development-services.html" class="block px-3 py-2 rounded text-sm">AI Chatbot Development</a>
+                                <a href="machine-learning-development-services.html" class="block px-3 py-2 rounded text-sm">Machine Learning</a>
+                                <a href="blockchain-development-services.html" class="block px-3 py-2 rounded text-sm">Blockchain Development</a>
+                                <h4 class="font-bold text-orange-500 mb-2 mt-4 px-3">Enterprise Solutions</h4>
+                                <a href="software-development-services.html" class="block px-3 py-2 rounded text-sm">Software Development</a>
+                                <a href="ecommerce-development-services.html" class="block px-3 py-2 rounded text-sm">E-Commerce Development</a>
+                                <a href="erp-development-services.html" class="block px-3 py-2 rounded text-sm">ERP Development</a>
+                                <a href="crm-development-services.html" class="block px-3 py-2 rounded text-sm">CRM Development</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="flex items-center gap-1 hover:text-orange-500 py-4">Solutions <i class="fas fa-chevron-down text-xs"></i></button>
+                        <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 bg-white text-gray-800 rounded-lg shadow-xl w-[400px] p-4 grid grid-cols-2 gap-2 z-50">
+                            <a href="healthcare-app-development-solution.html" class="block px-3 py-2 rounded text-sm">Healthcare</a>
+                            <a href="fintech-app-development-solution.html" class="block px-3 py-2 rounded text-sm">FinTech</a>
+                            <a href="food-delivery-app-development-solution.html" class="block px-3 py-2 rounded text-sm">Food Delivery</a>
+                            <a href="education-app-development-solution.html" class="block px-3 py-2 rounded text-sm">Education</a>
+                            <a href="real-estate-solutions.html" class="block px-3 py-2 rounded text-sm">Real Estate</a>
+                            <a href="travel-app-development-solution.html" class="block px-3 py-2 rounded text-sm">Travel</a>
+                            <a href="on-demand-app-development-solution.html" class="block px-3 py-2 rounded text-sm">On-Demand</a>
+                            <a href="nft-marketplace-development-solution.html" class="block px-3 py-2 rounded text-sm">NFT Marketplace</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="flex items-center gap-1 hover:text-orange-500 py-4">Hire Developers <i class="fas fa-chevron-down text-xs"></i></button>
+                        <div class="dropdown-menu absolute top-full right-0 bg-white text-gray-800 rounded-lg shadow-xl w-[350px] p-4 grid grid-cols-2 gap-2 z-50">
+                            <a href="hire-flutter-developers.html" class="block px-3 py-2 rounded text-sm">Flutter Developers</a>
+                            <a href="hire-react-native-developers.html" class="block px-3 py-2 rounded text-sm">React Native Devs</a>
+                            <a href="hire-android-app-developers.html" class="block px-3 py-2 rounded text-sm">Android Developers</a>
+                            <a href="hire-ios-app-developers.html" class="block px-3 py-2 rounded text-sm">iOS Developers</a>
+                            <a href="hire-full-stack-developers.html" class="block px-3 py-2 rounded text-sm">Full Stack Devs</a>
+                            <a href="hire-python-developers.html" class="block px-3 py-2 rounded text-sm">Python Developers</a>
+                            <a href="hire-blockchain-developers.html" class="block px-3 py-2 rounded text-sm">Blockchain Devs</a>
+                            <a href="hire-dedicated-developers.html" class="block px-3 py-2 rounded text-sm">Dedicated Teams</a>
+                        </div>
+                    </div>
+                    <a href="aboutus.html" class="hover:text-orange-500">About</a>
+                    <a href="portfolio.html" class="hover:text-orange-500">Portfolio</a>
+                    <a href="contact-us.html" class="hover:text-orange-500">Contact</a>
+                </div>
+                <a href="contact-us.html" class="btn-primary px-6 py-2 rounded-full text-white font-semibold hidden md:block">Get Quote</a>
+                <button class="lg:hidden text-white text-2xl" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"><i class="fas fa-bars"></i></button>
+            </div>
+                        <div id="mobileMenu" class="hidden lg:hidden mt-4 pb-4 max-h-[80vh] overflow-y-auto">
+                <div class="mobile-section">
+                    <div class="mobile-section-title">Services</div>
+                    <a href="mobile-app-development.html" class="block py-2 hover:text-orange-500 text-sm">Mobile App Development</a>
+                    <a href="android-app-development.html" class="block py-2 hover:text-orange-500 text-sm">Android Development</a>
+                    <a href="ios-app-development.html" class="block py-2 hover:text-orange-500 text-sm">iOS Development</a>
+                    <a href="flutter-app-development.html" class="block py-2 hover:text-orange-500 text-sm">Flutter Development</a>
+                    <a href="react-native-app-development.html" class="block py-2 hover:text-orange-500 text-sm">React Native Development</a>
+                    <a href="website-development-services.html" class="block py-2 hover:text-orange-500 text-sm">Website Development</a>
+                    <a href="ai-development-services.html" class="block py-2 hover:text-orange-500 text-sm">AI Development</a>
+                    <a href="blockchain-development-services.html" class="block py-2 hover:text-orange-500 text-sm">Blockchain Development</a>
+                    <a href="ecommerce-development-services.html" class="block py-2 hover:text-orange-500 text-sm">E-Commerce Development</a>
+                </div>
+                <div class="mobile-section">
+                    <div class="mobile-section-title">Solutions</div>
+                    <a href="healthcare-app-development-solution.html" class="block py-2 hover:text-orange-500 text-sm">Healthcare</a>
+                    <a href="fintech-app-development-solution.html" class="block py-2 hover:text-orange-500 text-sm">FinTech</a>
+                    <a href="education-app-development-solution.html" class="block py-2 hover:text-orange-500 text-sm">Education</a>
+                    <a href="food-delivery-app-development-solution.html" class="block py-2 hover:text-orange-500 text-sm">Food Delivery</a>
+                    <a href="real-estate-solutions.html" class="block py-2 hover:text-orange-500 text-sm">Real Estate</a>
+                    <a href="travel-app-development-solution.html" class="block py-2 hover:text-orange-500 text-sm">Travel</a>
+                </div>
+                <div class="mobile-section">
+                    <div class="mobile-section-title">Hire Developers</div>
+                    <a href="hire-flutter-developers.html" class="block py-2 hover:text-orange-500 text-sm">Flutter Developers</a>
+                    <a href="hire-react-native-developers.html" class="block py-2 hover:text-orange-500 text-sm">React Native Developers</a>
+                    <a href="hire-android-app-developers.html" class="block py-2 hover:text-orange-500 text-sm">Android Developers</a>
+                    <a href="hire-ios-app-developers.html" class="block py-2 hover:text-orange-500 text-sm">iOS Developers</a>
+                    <a href="hire-full-stack-developers.html" class="block py-2 hover:text-orange-500 text-sm">Full Stack Developers</a>
+                    <a href="hire-python-developers.html" class="block py-2 hover:text-orange-500 text-sm">Python Developers</a>
+                    <a href="hire-dedicated-developers.html" class="block py-2 hover:text-orange-500 text-sm">Dedicated Teams</a>
+                </div>
+                <div class="pt-2">
+                    <a href="aboutus.html" class="block py-2 hover:text-orange-500 font-medium">About Us</a>
+                    <a href="portfolio.html" class="block py-2 hover:text-orange-500 font-medium">Portfolio</a>
+                    <a href="career.html" class="block py-2 hover:text-orange-500 font-medium">Careers</a>
+                    <a href="contact-us.html" class="block py-2 hover:text-orange-500 font-medium">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center overflow-hidden">
+        <video class="absolute inset-0 w-full h-full object-cover" src="aboutbg.mp4" autoplay loop muted playsinline></video>
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 py-20 text-white">
+            <span class="text-orange-500 font-semibold">ABOUT US</span>
+            <h1 class="text-4xl lg:text-6xl font-bold mt-4 mb-6">We Build Digital <span class="text-orange-500">Excellence</span></h1>
+            <p class="text-xl text-gray-300 max-w-2xl">A team of passionate developers, designers, and strategists dedicated to transforming your ideas into powerful digital solutions.</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div><div class="text-5xl font-bold text-orange-500 mb-2">500+</div><div class="text-gray-400">Projects Delivered</div></div>
+                <div><div class="text-5xl font-bold text-orange-500 mb-2">200+</div><div class="text-gray-400">Happy Clients</div></div>
+                <div><div class="text-5xl font-bold text-orange-500 mb-2">50+</div><div class="text-gray-400">Team Members</div></div>
+                <div><div class="text-5xl font-bold text-orange-500 mb-2">10+</div><div class="text-gray-400">Years Experience</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Why Choose <span class="text-orange-500">Futuronix</span>?</h2>
+                    <p class="text-gray-600 text-lg mb-8">We are a full-service software development company that helps businesses of all sizes achieve their digital transformation goals. Our team combines technical expertise with creative thinking to deliver solutions that make a real impact.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-check text-orange-500"></i></div>
+                            <div><h4 class="font-bold mb-1">Expert Team</h4><p class="text-gray-600">Skilled developers with expertise in latest technologies</p></div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-check text-orange-500"></i></div>
+                            <div><h4 class="font-bold mb-1">Agile Development</h4><p class="text-gray-600">Flexible and iterative approach for faster delivery</p></div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-check text-orange-500"></i></div>
+                            <div><h4 class="font-bold mb-1">24/7 Support</h4><p class="text-gray-600">Round-the-clock assistance for all your needs</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-12 text-white">
+                    <h3 class="text-2xl font-bold mb-6">Our Mission</h3>
+                    <p class="text-orange-100 text-lg mb-6">To empower businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage in the digital age.</p>
+                    <h3 class="text-2xl font-bold mb-6">Our Vision</h3>
+                    <p class="text-orange-100 text-lg">To be the most trusted technology partner for businesses worldwide, known for excellence, innovation, and customer success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">What We <span class="text-orange-500">Do</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-mobile-alt text-2xl text-orange-500"></i></div>
+                    <h3 class="font-bold mb-2">Mobile Apps</h3>
+                    <p class="text-gray-600 text-sm">iOS, Android & Cross-platform</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-globe text-2xl text-orange-500"></i></div>
+                    <h3 class="font-bold mb-2">Web Development</h3>
+                    <p class="text-gray-600 text-sm">Websites & Web Applications</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-brain text-2xl text-orange-500"></i></div>
+                    <h3 class="font-bold mb-2">AI Solutions</h3>
+                    <p class="text-gray-600 text-sm">Machine Learning & AI</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-cubes text-2xl text-orange-500"></i></div>
+                    <h3 class="font-bold mb-2">Blockchain</h3>
+                    <p class="text-gray-600 text-sm">DeFi, NFT & Smart Contracts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Let's Work Together</h2>
+            <p class="text-xl mb-8 text-orange-100">Ready to start your project? Get in touch with us today.</p>
+            <a href="contact-us.html" class="inline-block bg-white text-orange-500 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div><div class="text-2xl font-bold mb-4"><span class="text-orange-500">Futur</span>onix</div><p class="text-gray-400">Transforming ideas into digital reality.</p></div>
+                <div><h4 class="font-bold mb-4">Services</h4><ul class="space-y-2 text-gray-400"><li><a href="mobile-app-development.html" class="hover:text-orange-500">Mobile Development</a></li><li><a href="website-development-services.html" class="hover:text-orange-500">Web Development</a></li><li><a href="ai-development-services.html" class="hover:text-orange-500">AI Solutions</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">Company</h4><ul class="space-y-2 text-gray-400"><li><a href="aboutus.html" class="hover:text-orange-500">About Us</a></li><li><a href="portfolio.html" class="hover:text-orange-500">Portfolio</a></li><li><a href="contact-us.html" class="hover:text-orange-500">Contact</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">Contact</h4><ul class="space-y-2 text-gray-400"><li><i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>128 CITY ROAD, LONDON, EC1V2NX</li><li><i class="fas fa-envelope mr-2 text-orange-500"></i>info@futuronix.uk</li><li><i class="fas fa-phone mr-2 text-orange-500"></i>+1 (559) 717-8583</li></ul></div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400"><p>&copy; 2025 Futuronix LTD. All rights reserved.</p></div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
